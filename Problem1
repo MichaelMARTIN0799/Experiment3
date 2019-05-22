@@ -1,0 +1,45 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	int integer[10];
+	double Total, Average;
+	int i, Sinteger, Linteger;
+	
+	cout<<"Enter 10 integers: "<<endl;
+	
+	for (i=0; i<10; i++)
+		integer[i] = 0;
+	for (i=0; i<10; i++)
+		cin>>integer[i];
+
+	Total = 0;
+	for (i=0; i<10; i++)
+	Total=Total+integer[i];
+	cout<<endl;
+	cout<<"Total of all integer is: "<<Total;
+	
+	Average = Total/10;
+	cout<<endl;
+	cout<<"Average is: "<<Average;
+	
+	Linteger=0;
+	for (i=0; i<10; i++)
+		if (integer[Linteger] < integer[i])
+			Linteger=i;
+	Linteger = integer[Linteger];
+	cout<<endl;
+	cout<<"Largest integer is: "<<Linteger;
+	
+	Sinteger=0;
+	for (i=0; i<10; i++)
+		if (integer[Sinteger] > integer[i])
+			Sinteger=i;
+	Sinteger= integer[Sinteger];
+	cout<<endl;
+	cout<<"Smallest integer is: "<<Sinteger;
+return 0;
+_getch();
+}
