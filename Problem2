@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	
+	int PROVINCE = 3;
+	int WEEK = 7;
+    int temperature[PROVINCE][WEEK];
+
+    cout << "Enter all the temperature record for a week starting from the 1st Province up to the 3rd Province";
+    cout<<endl;
+
+    for (int i = 0; i < PROVINCE; i++)
+    {
+        for(int j = 0; j < WEEK; j++)
+        {
+            cout << "Province " << i + 1 << ", Day " << j + 1 << " : ";
+            cin >> temperature[i][j];
+        }
+    }
+
+    cout << "Here are the data gathered about the temperature for the 3 PROVINCES: ";
+    cout<<endl;
+
+    for (int i = 0; i < PROVINCE; i++)
+    {
+        for(int j = 0; j < WEEK; j++)
+        {
+            cout << "Province " << i + 1 << ", Day " << j + 1 << " = " << temperature[i][j] << endl;
+        }
+    }
+
+    return 0;
+    _getch();
+}
